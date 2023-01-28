@@ -22,6 +22,9 @@ function Home() {
     padding:20,
     fontSize: 22,
   };
+  const paragraphStyle = {
+    fontWeight: 'bold',
+  }
   return (
     <div style={{backgroundColor:'black', height:'100vh', paddingTop:10, margin:'-8px'}}>
       <h1 style={{textAlign:'center', color:'white'}}>NASA PICTURE OF THE DAY</h1>
@@ -29,8 +32,8 @@ function Home() {
         <img style={imgStyle} src={photoData.url} alt={photoData.title} />
         <div style={explanationStyle}>
           <h2 style={{textAlign:'center'}}>{photoData.title}</h2>
-          <p style={{fontWeight: 'bold'}}>{photoData.copyright}</p>
-          <p style={{fontWeight: 'bold'}}>{photoData.date}</p>
+          <p style={paragraphStyle}>{photoData.copyright}</p>
+          <p style={paragraphStyle}>{photoData.date}</p>
           <p>{photoData.explanation}</p>
         </div>
       </div>
